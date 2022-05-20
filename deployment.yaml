@@ -4,19 +4,19 @@ metadata:
   name: mynginxdeployment
   labels:
     app: myapp 
-    type: frontend
+    type: front-end
 spec:
   replicas: 2
   selector:
     matchLabels:
       app: myapp
-      type: frontend
+      type: front-end
   template:
       metadata:
         name: mynginxpod
         labels: 
           app: myapp
-          type: frontend
+          type: front-end
       spec:
         containers:
         - name: mynginxcontainer
